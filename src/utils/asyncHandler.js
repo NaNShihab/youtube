@@ -1,6 +1,6 @@
 const asyncHandler = (requesthandler) => {
     return (res, req, next) => {
-        Promise.resolve((requesthandler(res, req, next))).catch((error) => next(error))
+        Promise.resolve(requesthandler(res, req, next)).catch((error) => next(error))
     }
 }
 
